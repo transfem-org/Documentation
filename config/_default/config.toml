@@ -1,4 +1,4 @@
-baseurl = "https://doks-child-theme.netlify.app/"
+baseurl = "https://docs.launcher.moe/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -7,6 +7,7 @@ enableGitInfo = false
 enableRobotsTXT = true
 paginate = 7
 rssLimit = 10
+disableKinds = ["sitemap"]
 
 # Multilingual
 defaultContentLanguage = "en"
@@ -38,23 +39,23 @@ isPlainText = true
 notAlternative = true
 
 # add output format for section sitemap.xml
-[outputFormats.SITEMAP]
-mediaType = "application/xml"
-baseName = "sitemap"
-isHTML = false
-isPlainText = true
-noUgly = true
-rel  = "sitemap"
+#[outputFormats.SITEMAP]
+#mediaType = "application/xml"
+#baseName = "sitemap"
+#isHTML = false
+#isPlainText = true
+#noUgly = true
+#rel  = "sitemap"
 
 [caches]
   [caches.getjson]
     dir = ":cacheDir/:project"
     maxAge = "10s"
 
-[sitemap]
-  changefreq = "weekly"
-  filename = "sitemap.xml"
-  priority = 0.5
+#[sitemap]
+#  changefreq = "weekly"
+#  filename = "sitemap.xml"
+#  priority = 0.5
 
 [taxonomies]
   contributor = "contributors"
