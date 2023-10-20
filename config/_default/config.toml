@@ -1,4 +1,4 @@
-baseurl = "https://docs.launcher.moe/"
+baseurl = "https://docs.joinsharkey.org"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
