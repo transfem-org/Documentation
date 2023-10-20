@@ -1,0 +1,27 @@
+User-Agent: *
+
+Disallow: /docs/prologue/introduction/
+
+Disallow: /docs/prologue/
+
+Disallow: /docs/prologue/quick-start/
+
+Disallow: /docs/prologue/commands/
+
+Disallow: /docs/help/
+
+Disallow: /docs/help/how-to-update/
+
+Disallow: /docs/help/troubleshooting/
+
+Disallow: /docs/help/faq/
+
+Disallow: /docs/
+
+Disallow: /
+
+Disallow: /categories/
+
+Disallow: /contributors/
+
+Disallow: /tags/
