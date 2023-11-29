@@ -204,7 +204,7 @@ running.
 See [Misskey's
 instructions](https://misskey-hub.net/en/docs/admin/nginx.html)
 
-# Update Sharkey
+## Update Sharkey
 
 Very similar to the installation process:
 
