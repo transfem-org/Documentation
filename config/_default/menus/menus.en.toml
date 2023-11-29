@@ -1,7 +1,7 @@
-[[main]]
-  name = "Docs"
-  url = "/docs"
-  weight = 10
+#[[main]]
+#  name = "Docs"
+#  url = "/docs/install/fresh"
+#  weight = 10
 
 [[social]]
   name = "GitHub"
