@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Install on</title><link>https://docs.joinsharkey.org/docs/install/</link><description>Recent content in Install on</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.joinsharkey.org/docs/install/index.xml" rel="self" type="application/rss+xml"/><item><title>Fresh Installation</title><link>https://docs.joinsharkey.org/docs/install/fresh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.joinsharkey.org/docs/install/fresh/</guid><description>Before you start, you really need:
+an always-on machine that can receive connections from the Internet a domain name to dedicate to your Sharkey instance, resolving to the address(es) of that machine a web server running on that machine, with valid TLS certificates for the domain name With Docker #
+Prerequisites:
+Docker Compose Plugin Create multiple directories:
+mkdir Sharkey &amp;amp;&amp;amp; mkdir Sharkey/.config Fetch all required examples and enter directory:
+wget -O Sharkey/docker-compose.</description></item><item><title>Migrating from another software</title><link>https://docs.joinsharkey.org/docs/install/migrate/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.joinsharkey.org/docs/install/migrate/</guid><description>From Misskey #
+Let&amp;rsquo;s say you have a working Misskey, running as user misskey from /home/misskey/misskey.
+Migrating to Sharkey is the same as updating to a newer Misskey version:
+sudo -u misskey -i cd misskey git remote rename origin misskey git remote add origin https://github.com/transfem-org/Sharkey.git git remote update -p git checkout -b stable --track origin/stable git pull --recurse-submodules pnpm install --frozen-lockfile pnpm run build pnpm run migrate Then you can restart your service.</description></item></channel></rss>

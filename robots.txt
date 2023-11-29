@@ -1,20 +1,14 @@
 User-Agent: *
 
-Disallow: /docs/prologue/introduction/
+Disallow: /docs/install/
 
-Disallow: /docs/prologue/
+Disallow: /docs/install/fresh/
 
-Disallow: /docs/prologue/quick-start/
+Disallow: /docs/install/migrate/
 
-Disallow: /docs/prologue/commands/
+Disallow: /docs/comparsion/
 
-Disallow: /docs/help/
-
-Disallow: /docs/help/how-to-update/
-
-Disallow: /docs/help/troubleshooting/
-
-Disallow: /docs/help/faq/
+Disallow: /docs/comparsion/misskey/
 
 Disallow: /docs/
 
