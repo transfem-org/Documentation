@@ -21,19 +21,25 @@ Prerequisites:
 
 Create multiple directories:
 
-    mkdir Sharkey && mkdir Sharkey/.config
+```bash
+mkdir Sharkey && mkdir Sharkey/.config
+```
 
 Fetch all required examples and enter directory:
 
-    wget -O Sharkey/docker-compose.yml https://raw.githubusercontent.com/transfem-org/Sharkey/stable/docker-compose.yml.example
-    wget -O Sharkey/.config/default.yml https://raw.githubusercontent.com/transfem-org/Sharkey/stable/.config/example.yml
-    wget -O Sharkey/.config/docker.env https://raw.githubusercontent.com/transfem-org/Sharkey/stable/.config/docker_example.env
-    cd Sharkey
+```bash
+wget -O Sharkey/docker-compose.yml https://raw.githubusercontent.com/transfem-org/Sharkey/stable/docker-compose.yml.example
+wget -O Sharkey/.config/default.yml https://raw.githubusercontent.com/transfem-org/Sharkey/stable/.config/example.yml
+wget -O Sharkey/.config/docker.env https://raw.githubusercontent.com/transfem-org/Sharkey/stable/.config/docker_example.env
+cd Sharkey
+```
 
 Edit `.config/default.yml`, there are comments explaining what each
 option means. In particular, we're going to assume you have:
 
-    url: https://{YOUR DOMAIN NAME}/
+```yaml
+url: https://{YOUR DOMAIN NAME}/
+```
 
 (replace `{YOUR DOMAIN NAME}` with the domain name we talked about
 at the start).
@@ -48,7 +54,9 @@ changes in the `services:` / `web:` section:
 
 Starting:
 
-    docker compose up -d
+```bash
+docker compose up -d
+```
 
 ## Manually
 
@@ -68,29 +76,37 @@ Prerequisites:
 
 Create a `sharkey` user:
 
-    adduser --disabled-password --disabled-login sharkey
+```bash
+adduser --disabled-password --disabled-login sharkey
+```
 
 start a shell as that user:
 
-    sudo -u sharkey -i
+```bash
+sudo -u sharkey -i
+```
 
 (or something like that), then:
 
-    git clone --recurse-submodules -b stable https://github.com/transfem-org/Sharkey.git
-    cd Sharkey
-    pnpm install --frozen-lockfile
-    cp .config/example.yml .config/default.yml
+```bash
+git clone --recurse-submodules -b stable https://github.com/transfem-org/Sharkey.git
+cd Sharkey
+pnpm install --frozen-lockfile
+cp .config/example.yml .config/default.yml
+```
 
 Edit `.config/default.yml`, there are comments explaining what each
 option means. In particular, we're going to assume you have:
 
-    url: https://{YOUR DOMAIN NAME}/
-    db:
-      host: localhost
-      port: 5432
-      db: sharkey
-      user: sharkey
-      pass: {YOUR PASSWORD}
+```yaml
+url: https://{YOUR DOMAIN NAME}/
+db:
+  host: localhost
+  port: 5432
+  db: sharkey
+  user: sharkey
+  pass: {YOUR PASSWORD}
+```
 
 (replace `{YOUR PASSWORD}` with an actual password you make up for
 this, and `{YOUR DOMAIN NAME}` with the domain name we talked about
@@ -98,31 +114,41 @@ at the start)
 
 Building:
 
-    pnpm run build
+```bash
+pnpm run build
+```
 
 Create the PostgreSQL user and database, either with `createuser`
 and `createdb` or with `sudo -u postgres psql` and then:
 
-    create database sharkey with encoding = 'UTF8';
-    create user sharkey with encrypted password '{YOUR_PASSWORD}';
-    grant all privileges on database sharkey to sharkey;
-    alter database sharkey owner to sharkey;
-    \q
+```sql
+CREATE DATABASE sharkey WITH ENCODING = 'UTF8';
+CREATE USER sharkey WITH ENCRYPTED PASSWORD '{YOUR_PASSWORD}';
+GRANT ALL PRIVILEGES ON DATABASE sharkey TO sharkey;
+ALTER DATABASE sharkey OWNER TO sharkey;
+\q
+```
 
 (replace `{YOUR PASSWORD}` with the same password as before)
 
 Then create the schema:
 
-    pnpm run init
+```bash
+pnpm run init
+```
 
 And start it:
 
-    pnpm start
+```bash
+pnpm start
+```
 
 you should see a series of colourful lines, ending with something
 like:
 
-    Now listening on port 3000 on https://example.tld
+```text
+Now listening on port 3000 on https://example.tld
+```
 
 but with a different URL at the end (you *did* change the `url`
 setting in the config file, right?). Stop that process (control-C is
@@ -132,33 +158,37 @@ enough), and set up a system service for Sharkey.
 
 Create a file `/etc/systemd/system/sharkey.service` containing:
 
-    [Unit]
-    Description=Sharkey daemon
+```ini
+[Unit]
+Description=Sharkey daemon
 
-    [Service]
-    Type=simple
-    User=sharkey
-    ExecStart=/usr/bin/pnpm start
-    WorkingDirectory=/home/sharkey/Sharkey
-    Environment="NODE_OPTIONS=--max-old-space-size=8192"
-    Environment="NODE_ENV=production"
-    TimeoutSec=60
-    StandardOutput=journal
-    StandardError=journal
-    SyslogIdentifier=sharkey
-    Restart=always
+[Service]
+Type=simple
+User=sharkey
+ExecStart=/usr/bin/pnpm start
+WorkingDirectory=/home/sharkey/Sharkey
+Environment="NODE_OPTIONS=--max-old-space-size=8192"
+Environment="NODE_ENV=production"
+TimeoutSec=60
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=sharkey
+Restart=always
 
-    [Install]
-    WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
+```
 
 (you may need to change that `/usr/bin/pnpm` if you're not using
 your system NodeJS).
 
 Then:
 
-    sudo systemctl daemon-reload
-    sudo systemctl enable sharkey
-    sudo systemctl start sharkey
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable sharkey
+sudo systemctl start sharkey
+```
 
 After that, `systemctl status sharkey` should show that it's
 running.
@@ -167,32 +197,36 @@ running.
 
 Create a file `/etc/init.d/sharkey` containing:
 
-    #!/sbin/openrc-run
+```bash
+#!/sbin/openrc-run
 
-    name=sharkey
-    description="Sharkey daemon"
+name=sharkey
+description="Sharkey daemon"
 
-    command="/usr/bin/pnpm"
-    command_args="start"
-    command_user="sharkey"
+command="/usr/bin/pnpm"
+command_args="start"
+command_user="sharkey"
 
-    supervisor="supervise-daemon"
-    supervise_daemon_args=" -d /home/sharkey/Sharkey -e NODE_ENV=production -e \"NODE_OPTIONS=--max-old-space-size=8192\"
+supervisor="supervise-daemon"
+supervise_daemon_args=" -d /home/sharkey/Sharkey -e NODE_ENV=production -e \"NODE_OPTIONS=--max-old-space-size=8192\""
 
-    pidfile="/run/${RC_SVCNAME}.pid"
+pidfile="/run/${RC_SVCNAME}.pid"
 
-    depend() {
-      need net
-      use logger nginx
-    }
+depend() {
+  need net
+  use logger nginx
+}
+```
 
 (you may need to change that `/usr/bin/pnpm` if you're not using
 your system NodeJS).
 
 Then:
 
-    sudo rc-update add sharkey
-    sudo rc-service sharkey start
+```bash
+sudo rc-update add sharkey
+sudo rc-service sharkey start
+```
 
 After that, `rc-service sharkey status` should show that it's
 running.
@@ -208,13 +242,15 @@ instructions](https://misskey-hub.net/en/docs/admin/nginx.html)
 
 Very similar to the installation process:
 
-    sudo -u sharkey -i
-    cd Sharkey
-    git checkout stable
-    git pull --recurse-submodules
-    pnpm install --frozen-lockfile
-    pnpm run build
-    pnpm run migrate
+```bash
+sudo -u sharkey -i
+cd Sharkey
+git checkout stable
+git pull --recurse-submodules
+pnpm install --frozen-lockfile
+pnpm run build
+pnpm run migrate
+```
 
 Then restart the service (`sudo systemctl restart sharkey` or
 `rc-service sharkey restart`).

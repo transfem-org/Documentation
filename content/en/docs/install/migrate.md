@@ -12,16 +12,18 @@ Let's say you have a working Misskey, running as user `misskey` from
 Migrating to Sharkey is the same as updating to a newer Misskey
 version:
 
-    sudo -u misskey -i
-    cd misskey
-    git remote rename origin misskey
-    git remote add origin https://github.com/transfem-org/Sharkey.git
-    git remote update -p
-    git checkout -b stable --track origin/stable
-    git pull --recurse-submodules
-    pnpm install --frozen-lockfile
-    pnpm run build
-    pnpm run migrate
+```shell
+sudo -u misskey -i
+cd misskey
+git remote rename origin misskey
+git remote add origin https://github.com/transfem-org/Sharkey.git
+git remote update -p
+git checkout -b stable --track origin/stable
+git pull --recurse-submodules
+pnpm install --frozen-lockfile
+pnpm run build
+pnpm run migrate
+```
 
 Then you can restart your service.
 
@@ -29,10 +31,12 @@ If you see weirdness like service not starting, or missing labels in
 the web UI, you should first make sure the build worked (check all the
 error messages!), then try building again from scratch:
 
-    pnpm run clean-all
-    pnpm install --frozen-lockfile
-    pnpm run build
-    pnpm run migrate
+```shell
+pnpm run clean-all
+pnpm install --frozen-lockfile
+pnpm run build
+pnpm run migrate
+```
 
 Also, clear your browser's cache and local storage (this will log your
 browser out of Misskey/Sharkey).
@@ -68,7 +72,7 @@ If you use Sonic or ElasticSearch replace that section of the Docker
 Compose with the following, as Sharkey currently only supports
 meilisearch:
 
-```yml
+```yaml
 meilisearch:
     restart: always
     image: getmeili/meilisearch:v1.3.4
@@ -87,7 +91,7 @@ If you use DragonflyDB replace it with Redis or KeyDB, as Sharkey
 currently does not support DragonflyDB. To do this replace the section
 in the docker compose with the following:
 
-```yml
+```yaml
 redis:
     restart: always
     image: redis:7-alpine
@@ -115,7 +119,6 @@ recommend upgrading to 15 or 16. You can do this by making a new db
 volume, starting the newer PostgreSQL on it, and importing the data
 from the backup you just made. Refer to [the PostgreSQL
 documentation](https://www.postgresql.org/docs/current/backup-dump.html).
-
 
 Make sure to update the *mount paths* for volumes of the Sharkey
 container from `/firefish/` to `/sharkey/` (so your existing volumes
