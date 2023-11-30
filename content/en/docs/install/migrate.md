@@ -105,7 +105,7 @@ redis:
       retries: 20
 ```
 
-Backup your your firefish config and replace it with the [default
+Backup your firefish config and replace it with the [default
 sharkey
 one](https://raw.githubusercontent.com/transfem-org/Sharkey/develop/.config/example.yml)
 
