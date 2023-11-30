@@ -39,4 +39,4 @@ browser out of Misskey/Sharkey).
 
 ## From Firefish
 
-(someone please write this)
+(work in progress)
