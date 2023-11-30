@@ -242,6 +242,6 @@ Log in as an administrator, and go to the control panel.
 If you use an object store such as S3, double-check your settings
 (it's possible, for example, that the URL now looks like
 `https://https://yourdomain.com`, fix it). If you want your users to
-be able to search notes, you must enable via the "roles" system.
+be able to search notes, you must enable it via the "roles" system.
 
 Congratulations, you're now running Sharkey!
