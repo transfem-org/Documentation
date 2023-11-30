@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=preload as=font href=https://docs.joinsharkey.org/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=https://docs.joinsharkey.org/fonts/vendor/jost/jost-v4-latin-500.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=https://docs.joinsharkey.org/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin><script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script><link rel=stylesheet href=https://docs.joinsharkey.org/main.5a41cbb6818e80763eba13767b9789585354906e1ddf488ca8abb5d1a0fadb010155d5b2c87cd5606bc0fae2657405961103bc08c0a8fc209054e5ccc81a4217.css integrity="sha512-WkHLtoGOgHY+uhN2e5eJWFNUkG4d30iMqKu10aD62wEBVdWyyHzVYGvA+uJldAWWEQO8CMCo/CCQVOXMyBpCFw==" crossorigin=anonymous><noscript><style>img.lazyload{display:none}</style></noscript><meta name=robots content="index, follow"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><title>Migrating from another software - Sharkey Documentation</title><meta name=description content="From Misskey #Let&amp;rsquo;s say you have a working Misskey, running as user misskey from /home/misskey/misskey.
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=preload as=font href=https://docs.joinsharkey.org/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=https://docs.joinsharkey.org/fonts/vendor/jost/jost-v4-latin-500.woff2 type=font/woff2 crossorigin><link rel=preload as=font href=https://docs.joinsharkey.org/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin><script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script><link rel=stylesheet href=https://docs.joinsharkey.org/main.1a7f5908b44154125eeb14871a4eb2a672952c82bfe3a1ad3ac38245d83c5b8abcb2c974855e0149e958f5412c60b94cbdbe12895caff7861fd5b1b409b1f4c1.css integrity="sha512-Gn9ZCLRBVBJe6xSHGk6ypnKVLIK/46GtOsOCRdg8W4q8ssl0hV4BSelY9UEsYLlMvb4SiVyv94Yf1bG0CbH0wQ==" crossorigin=anonymous><noscript><style>img.lazyload{display:none}</style></noscript><meta name=robots content="index, follow"><meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><title>Migrating from another software - Sharkey Documentation</title><meta name=description content="From Misskey #Let&amp;rsquo;s say you have a working Misskey, running as user misskey from /home/misskey/misskey.
 Migrating to Sharkey is the same as updating to a newer Misskey version:
 sudo -u misskey -i cd misskey git remote rename origin misskey git remote add origin https://github.com/transfem-org/Sharkey.git git remote update -p git checkout -b stable --track origin/stable git pull --recurse-submodules pnpm install --frozen-lockfile pnpm run build pnpm run migrate Then you can restart your service."><link rel=canonical href=https://docs.joinsharkey.org/docs/install/migrate/><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Migrating from another software"><meta property="og:description" content="From Misskey #Let&rsquo;s say you have a working Misskey, running as user misskey from /home/misskey/misskey.
 Migrating to Sharkey is the same as updating to a newer Misskey version:
@@ -12,9 +12,9 @@ Comparsion</button><div class=collapse id=section-f5bfbc80051eaa2963538db69f1de3
 Install</button><div class="collapse show" id=section-349838fb1d851d3e2014b9fe39203275><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li><a class="docs-link rounded" href=https://docs.joinsharkey.org/docs/install/fresh/>Fresh Installation</a></li><li><a class="docs-link rounded active" href=https://docs.joinsharkey.org/docs/install/migrate/>Migrating from another software</a></li></ul></div></li><li class=mb-1><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=collapse data-bs-target=#section-f5bfbc80051eaa2963538db69f1de363 aria-expanded=false>
 Comparsion</button><div class=collapse id=section-f5bfbc80051eaa2963538db69f1de363><ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"><li><a class="docs-link rounded" href=https://docs.joinsharkey.org/docs/comparsion/misskey/>Sharkey vs Misskey</a></li></ul></div></li></ul></nav></div><nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation"><div class=d-xl-none><button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type=button data-bs-toggle=collapse data-bs-target=#onThisPage aria-controls=doks-docs-nav aria-expanded=false aria-label="Toggle On this page navigation">
 <span>On this page</span>
-<span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg></span></button><div class=collapse id=onThisPage><div class="card card-body mt-3 py-1"><div class=page-links><nav id=TableOfContents><ul><li><a href=#from-misskey>From Misskey</a></li><li><a href=#from-firefish>From Firefish</a></li></ul></nav></div></div></div></div><div class="page-links d-none d-xl-block"><h3>On this page</h3><nav id=TableOfContents><ul><li><a href=#from-misskey>From Misskey</a></li><li><a href=#from-firefish>From Firefish</a></li></ul></nav></div></nav><main class="docs-content col-lg-11 col-xl-9"><h1>Migrating from another software</h1><p class=lead></p><nav class=d-xl-none aria-label="Quaternary navigation"><div class=d-xl-none><button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type=button data-bs-toggle=collapse data-bs-target=#onThisPage aria-controls=doks-docs-nav aria-expanded=false aria-label="Toggle On this page navigation">
+<span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg></span></button><div class=collapse id=onThisPage><div class="card card-body mt-3 py-1"><div class=page-links><nav id=TableOfContents><ul><li><a href=#from-misskey>From Misskey</a></li><li><a href=#from-firefish>From Firefish</a><ul><li><a href=#using-docker>Using Docker</a></li></ul></li></ul></nav></div></div></div></div><div class="page-links d-none d-xl-block"><h3>On this page</h3><nav id=TableOfContents><ul><li><a href=#from-misskey>From Misskey</a></li><li><a href=#from-firefish>From Firefish</a><ul><li><a href=#using-docker>Using Docker</a></li></ul></li></ul></nav></div></nav><main class="docs-content col-lg-11 col-xl-9"><h1>Migrating from another software</h1><p class=lead></p><nav class=d-xl-none aria-label="Quaternary navigation"><div class=d-xl-none><button class="btn btn-outline-primary btn-sm doks-toc-toggle collapsed" type=button data-bs-toggle=collapse data-bs-target=#onThisPage aria-controls=doks-docs-nav aria-expanded=false aria-label="Toggle On this page navigation">
 <span>On this page</span>
-<span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg></span></button><div class=collapse id=onThisPage><div class="card card-body mt-3 py-1"><div class=page-links><nav id=TableOfContents><ul><li><a href=#from-misskey>From Misskey</a></li><li><a href=#from-firefish>From Firefish</a></li></ul></nav></div></div></div></div><div class="page-links d-none d-xl-block"><h3>On this page</h3><nav id=TableOfContents><ul><li><a href=#from-misskey>From Misskey</a></li><li><a href=#from-firefish>From Firefish</a></li></ul></nav></div></nav><h2 id=from-misskey>From Misskey <a href=#from-misskey class=anchor aria-hidden=true>#</a></h2><p>Let&rsquo;s say you have a working Misskey, running as user <code>misskey</code> from
+<span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-expand" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Expand</title><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="doks doks-collapse" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Collapse</title><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg></span></button><div class=collapse id=onThisPage><div class="card card-body mt-3 py-1"><div class=page-links><nav id=TableOfContents><ul><li><a href=#from-misskey>From Misskey</a></li><li><a href=#from-firefish>From Firefish</a><ul><li><a href=#using-docker>Using Docker</a></li></ul></li></ul></nav></div></div></div></div><div class="page-links d-none d-xl-block"><h3>On this page</h3><nav id=TableOfContents><ul><li><a href=#from-misskey>From Misskey</a></li><li><a href=#from-firefish>From Firefish</a><ul><li><a href=#using-docker>Using Docker</a></li></ul></li></ul></nav></div></nav><h2 id=from-misskey>From Misskey <a href=#from-misskey class=anchor aria-hidden=true>#</a></h2><p>Let&rsquo;s say you have a working Misskey, running as user <code>misskey</code> from
 <code>/home/misskey/misskey</code>.</p><p>Migrating to Sharkey is the same as updating to a newer Misskey
 version:</p><pre><code>sudo -u misskey -i
 cd misskey
@@ -33,7 +33,149 @@ pnpm install --frozen-lockfile
 pnpm run build
 pnpm run migrate
 </code></pre><p>Also, clear your browser&rsquo;s cache and local storage (this will log your
-browser out of Misskey/Sharkey).</p><h2 id=from-firefish>From Firefish <a href=#from-firefish class=anchor aria-hidden=true>#</a></h2><p>(work in progress)</p><div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between"></div><div class="docs-navigation d-flex justify-content-between"><a href=/docs/install/fresh/><div class="card my-1"><div class="card-body py-2">&larr; Fresh Installation</div></div></a><a class=ms-auto href=/docs/comparsion/misskey/><div class="card my-1"><div class="card-body py-2">Sharkey vs Misskey &rarr;</div></div></a></div></main></div></div></div><footer class="footer text-muted"><div class=container-xxl><div class=row><div class="col-lg-8 order-last order-lg-first"><ul class=list-inline><li class=list-inline-item>Powered by <a class=text-muted href=https://pages.github.com/>Github Pages</a>, <a class=text-muted href=https://gohugo.io/>Hugo</a>, and <a class=text-muted href=https://getdoks.org/>Doks</a></li></ul></div><div class="col-lg-8 order-first order-lg-last text-lg-end"><ul class=list-inline></ul></div></div></div></footer><script src=/js/bootstrap.min.223fd2b247a18dd9421f5eac2b8f740a338445314a3282ea82752d0b792e51c8d367c12fd27ceb7c011214399deee96a6fdfc51943f9bbef1aa079653d1e4bdc.js integrity="sha512-Ij/SskehjdlCH16sK490CjOERTFKMoLqgnUtC3kuUcjTZ8Ev0nzrfAESFDmd7ulqb9/FGUP5u+8aoHllPR5L3A==" crossorigin=anonymous defer></script>
+browser out of Misskey/Sharkey).</p><h2 id=from-firefish>From Firefish <a href=#from-firefish class=anchor aria-hidden=true>#</a></h2><p>This guide was only tested on a Firefish 1.0.5-RC instance: other
+versions and instances may differ quite a lot from the one we used,
+esspecially if you have custom patches applied.</p><p>If any of the steps fails, especially SQL queries, seek help from us
+<a href=https://matrix.to/#/#sharkey-support:shourai.de>via Matrix</a> or
+<a href=https://discord.gg/8hF6pMVWja>Discord</a>. Do <em>not</em> try fixing things
+in the DB yourself unless you <em>really</em> know what you are doing.</p><p>Before you begin, please take a backup of your database. While you&rsquo;re
+there, make sure you know how to restore from that backup! Using the
+<code>plain</code> format for <code>pg_dump</code> is probably the simplest way.</p><p>It&rsquo;s a good idea to have a separate backup of your list of silenced
+instances and of your <code>user</code> table.</p><h3 id=using-docker>Using Docker <a href=#using-docker class=anchor aria-hidden=true>#</a></h3><p>Stop / shut down the entire stack: PostgreSQL, Redis / KeyDB /
+DragonflyDB, Sonic / ElasticSearch / MeiliSearch, Firefish
+itself. Stop all of it.</p><p>Edit you docker compose and replace the Firefish image with
+<code>ghcr.io/transfem-org/sharkey:stable</code></p><p>If you use Sonic or ElasticSearch replace that section of the Docker
+Compose with the following, as Sharkey currently only supports
+meilisearch:</p><pre><code>meilisearch:
+  restart: always
+  image: getmeili/meilisearch:v1.3.4
+  environment:
+    - MEILI_NO_ANALYTICS=true
+    - MEILI_ENV=production
+  env_file:
+    - .config/meilisearch.env
+  networks:
+    - calcnet # &lt;-- Use whatever network name is used in the docker compose here
+  volumes:
+    - ./meili_data:/meili_data # &lt;--- make sure to replace the volume with one that fits your existing docker compose
+</code></pre><p>If you use DragonflyDB replace it with Redis or KeyDB, as Sharkey
+currently does not support DragonflyDB. To do this replace the section
+in the docker compose with the following:</p><pre><code>redis:
+  restart: always
+  image: redis:7-alpine
+  networks:
+    - calcnet # &lt;-- Use whatever network name is used in the docker compose here
+  volumes:
+    - ./redis:/data # &lt;-- Make sure to replace the volume with the one used in your firefish docker compose
+  healthcheck:
+    test: &quot;redis-cli ping&quot;
+    interval: 5s
+    retries: 20
+</code></pre><p>Backup your your firefish config and replace it with the <a href=https://raw.githubusercontent.com/transfem-org/Sharkey/develop/.config/example.yml>default
+sharkey
+one</a></p><p>Edit the config inline with your instance settings. Make sure to use
+the same <code>db</code> & <code>redis</code> settings as in your Firefish config.</p><p>Now is the time to <em>backup</em> your database and Redis volumes!</p><p>Firefish&rsquo;s docker-compose uses PostgreSQL version 12. We strongly
+recommend upgrading to 15 or 16. You can do this by making a new db
+volume, starting the newer PostgreSQL on it, and importing the data
+from the backup you just made. Refer to <a href=https://www.postgresql.org/docs/current/backup-dump.html>the PostgreSQL
+documentation</a>.</p><p>Make sure to update the <em>mount paths</em> for volumes of the Sharkey
+container from <code>/firefish/</code> to <code>/sharkey/</code> (so your existing volumes
+will show up at the new path, inside the container).</p><p>Now start <em>only</em> the database with <code>docker compose up -d db</code> (instead
+of <code>db</code>, you may need to use whatever name is set for the service in
+your docker compose config), and start a <code>psql</code> shell with <code>docker exec -it db psql -U firefish -d firefish</code> (replace <code>db</code> as before, and
+<code>-U firefish -d firefish</code> with the database user and database name,
+respectively, if they&rsquo;re different from <code>firefish</code>).</p><p>You should now be connected to your Firefish database. We need to
+massage it into shape so that Sharkey database migrations will
+work. The following series of SQL queries / commands should do it, but
+please read the comments and pay attention to the results after each
+query!</p><pre><code>-- start a transaction, so we won't leave the db in a halfway state if
+-- things go wrong
+BEGIN;
+
+-- we need to add back some columns that Firefish removed, but that
+-- Sharkey migrations expect
+ALTER TABLE &quot;user_profile&quot; ADD &quot;integrations&quot; JSONB NOT NULL DEFAULT '{}';
+ALTER TABLE &quot;meta&quot; ADD &quot;twitterConsumerSecret&quot; VARCHAR(128);
+ALTER TABLE &quot;meta&quot; ADD &quot;twitterConsumerKey&quot; VARCHAR(128);
+ALTER TABLE &quot;meta&quot; ADD &quot;enableTwitterIntegration&quot; BOOLEAN NOT NULL DEFAULT false;
+ALTER TABLE &quot;meta&quot; ADD &quot;enableGithubIntegration&quot; BOOLEAN NOT NULL DEFAULT false;
+ALTER TABLE &quot;meta&quot; ADD &quot;githubClientId&quot; VARCHAR(128);
+ALTER TABLE &quot;meta&quot; ADD &quot;githubClientSecret&quot; VARCHAR(128);
+ALTER TABLE &quot;meta&quot; ADD &quot;enableDiscordIntegration&quot; BOOLEAN NOT NULL DEFAULT false;
+ALTER TABLE &quot;meta&quot; ADD &quot;discordClientId&quot; VARCHAR(128);
+ALTER TABLE &quot;meta&quot; ADD &quot;discordClientSecret&quot; VARCHAR(128);
+
+-- also an extra table, for the same reasons
+CREATE TABLE antenna_note();
+
+-- move aside some FireFish columns; Sharkey migrations will
+-- re-create them; we don't `DROP` them because we want to keep the data
+ALTER TABLE &quot;user&quot; RENAME COLUMN &quot;movedToUri&quot; TO &quot;ff_movedToUri&quot;;
+ALTER TABLE &quot;user&quot; RENAME COLUMN &quot;alsoKnownAs&quot; TO &quot;ff_alsoKnownAs&quot;;
+ALTER TABLE &quot;user&quot; RENAME COLUMN &quot;isIndexable&quot; TO &quot;ff_isIndexable&quot;;
+ALTER TABLE &quot;user&quot; RENAME COLUMN &quot;speakAsCat&quot; TO &quot;ff_speakAsCat&quot;;
+ALTER TABLE &quot;user_profile&quot; RENAME COLUMN &quot;preventAiLearning&quot; TO &quot;ff_preventAiLearning&quot;;
+ALTER TABLE &quot;meta&quot; RENAME COLUMN &quot;silencedHosts&quot; TO &quot;ff_silencedHosts&quot;;
+
+-- this column was added by both Firefish and Misskey, but with
+-- different names, let's fix it
+ALTER TABLE &quot;meta&quot; RENAME COLUMN &quot;ToSUrl&quot; TO &quot;termsOfServiceUrl&quot;;
+
+-- update antenna types, this is only needed on some instances but
+-- recommend to run anyway
+--
+-- this *removes* any antennas of types not supported by Sharkey!
+CREATE TYPE public.new_antenna_src_enum AS ENUM ('home', 'all', 'list');
+ALTER TABLE antenna ADD COLUMN new_src public.new_antenna_src_enum;
+DELETE FROM antenna WHERE src NOT IN ('home', 'all', 'list');
+ALTER TABLE antenna DROP COLUMN src;
+ALTER TABLE antenna RENAME COLUMN new_src TO src;
+DROP TYPE public.antenna_src_enum;
+ALTER TYPE new_antenna_src_enum RENAME TO antenna_src_enum;
+
+-- optional but recommended: delete all empty moderation log entries
+DELETE FROM moderation_log WHERE info = '{}';
+
+-- only needed on some instances, run this if
+-- `\dT+ user_profile_mutingnotificationtypes_enum`
+-- does not show `note` in the &quot;elements&quot; section
+ALTER TYPE &quot;public&quot;.&quot;user_profile_mutingnotificationtypes_enum&quot; ADD VALUE 'note';
+</code></pre><p>If everything worked and you saw no errors, you can run <code>COMMIT;</code> in
+that same <code>psql</code> shell, to commit all the changes, then close that
+shell. Again, if anything went wrong, come talk to us on
+<a href=https://matrix.to/#/#sharkey-support:shourai.de>Matrix</a> or
+<a href=https://discord.gg/8hF6pMVWja>Discord</a>!</p><p>Start Sharkey, and let it run all its migrations. Once that&rsquo;s done,
+and Starkey says it&rsquo;s listening, stop Sharkey but keep the database
+running.</p><p>Open another <code>psql</code> shell like before (<code>docker exec -it db psql -U firefish -d firefish</code>, replacing things as before). We need another
+small pass of massaging.</p><pre><code>BEGIN;
+
+-- all existing users are approved, because Firefish doesn't have a
+-- concept of approvals
+UPDATE &quot;user&quot; SET approved = true;
+
+-- now we put back the data we moved aside
+UPDATE &quot;user&quot; SET &quot;movedToUri&quot; = &quot;ff_movedToUri&quot; WHERE &quot;ff_movedToUri&quot; IS NOT NULL;
+UPDATE &quot;user&quot; SET &quot;alsoKnownAs&quot; = &quot;ff_alsoKnownAs&quot; WHERE &quot;ff_alsoKnownAs&quot; IS NOT NULL;
+UPDATE &quot;user&quot; SET &quot;noindex&quot; = NOT (COALESCE(&quot;ff_isIndexable&quot;, true));
+UPDATE &quot;user&quot; SET &quot;speakAsCat&quot; = COALESCE(&quot;ff_speakAsCat&quot;, false);
+UPDATE &quot;user_profile&quot; SET &quot;preventAiLearning&quot; = COALESCE(&quot;ff_preventAiLearning&quot;, true);
+UPDATE &quot;meta&quot; SET &quot;silencedHosts&quot; = COALESCE(&quot;ff_silencedHosts&quot;,'{}');
+
+ALTER TABLE &quot;user&quot; DROP COLUMN &quot;ff_movedToUri&quot;;
+ALTER TABLE &quot;user&quot; DROP COLUMN &quot;ff_alsoKnownAs&quot;;
+ALTER TABLE &quot;user&quot; DROP COLUMN &quot;ff_isIndexable&quot;;
+ALTER TABLE &quot;user&quot; DROP COLUMN &quot;ff_speakAsCat&quot;;
+ALTER TABLE &quot;user_profile&quot; DROP COLUMN &quot;ff_preventAiLearning&quot;;
+ALTER TABLE &quot;meta&quot; DROP COLUMN &quot;ff_silencedHosts&quot;;
+</code></pre><p>If everything worked and you saw no errors, you can run <code>COMMIT;</code> in
+that same <code>psql</code> shell, to commit all the changes, then close that
+shell. Again, if anything went wrong, come talk to us on
+<a href=https://matrix.to/#/#sharkey-support:shourai.de>Matrix</a> or
+<a href=https://discord.gg/8hF6pMVWja>Discord</a>!</p><p>Start everything up again, you should see no errors in the logs.</p><p>Log in as an administrator, and go to the control panel.
+If you use an object store such as S3, double-check your settings
+(it&rsquo;s possible, for example, that the URL now looks like
+<code>https://https://yourdomain.com</code>, fix it). If you want your users to
+be able to search notes, you must enable via the &ldquo;roles&rdquo; system.</p><p>Congratulations, you&rsquo;re now running Sharkey!</p><div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between"></div><div class="docs-navigation d-flex justify-content-between"><a href=/docs/install/fresh/><div class="card my-1"><div class="card-body py-2">&larr; Fresh Installation</div></div></a><a class=ms-auto href=/docs/comparsion/misskey/><div class="card my-1"><div class="card-body py-2">Sharkey vs Misskey &rarr;</div></div></a></div></main></div></div></div><footer class="footer text-muted"><div class=container-xxl><div class=row><div class="col-lg-8 order-last order-lg-first"><ul class=list-inline><li class=list-inline-item>Powered by <a class=text-muted href=https://pages.github.com/>Github Pages</a>, <a class=text-muted href=https://gohugo.io/>Hugo</a>, and <a class=text-muted href=https://getdoks.org/>Doks</a></li></ul></div><div class="col-lg-8 order-first order-lg-last text-lg-end"><ul class=list-inline></ul></div></div></div></footer><script src=/js/bootstrap.min.223fd2b247a18dd9421f5eac2b8f740a338445314a3282ea82752d0b792e51c8d367c12fd27ceb7c011214399deee96a6fdfc51943f9bbef1aa079653d1e4bdc.js integrity="sha512-Ij/SskehjdlCH16sK490CjOERTFKMoLqgnUtC3kuUcjTZ8Ev0nzrfAESFDmd7ulqb9/FGUP5u+8aoHllPR5L3A==" crossorigin=anonymous defer></script>
 <script src=/js/highlight.min.8b2d7ddd72ba2c88d5107387eb3b66b90f1f864fd5afef6aed284425efb5919a9bc092f653f2985a205b85b0a158f70b460643ba2b71ccf7d3c1c107c3a4b609.js integrity="sha512-iy193XK6LIjVEHOH6ztmuQ8fhk/Vr+9q7ShEJe+1kZqbwJL2U/KYWiBbhbChWPcLRgZDuitxzPfTwcEHw6S2CQ==" crossorigin=anonymous defer></script>
 <script src=/main.min.57d9a84956f7d60008c47938c7fdd2f75e8618ff1d09c5a5e2b32f91debaf7681f7ceca8b51aded60067c2136172134a91ebc0674487c76a04e3244d927ebdde.js integrity="sha512-V9moSVb31gAIxHk4x/3S916GGP8dCcWl4rMvkd6692gffOyotRre1gBnwhNhchNKkevAZ0SHx2oE4yRNkn693g==" crossorigin=anonymous defer></script>
-<script src=https://docs.joinsharkey.org/index.min.3fa4117edc7fbd8bda94c4dda216b2f0530c99f6463a726eda1f1367c7f143a70e6204b2868ca8bc4529712783c1526e8d6fa3dff18fb2849ff510ae0832c421.js integrity="sha512-P6QRftx/vYvalMTdohay8FMMmfZGOnJu2h8TZ8fxQ6cOYgSyhoyovEUpcSeDwVJujW+j3/GPsoSf9RCuCDLEIQ==" crossorigin=anonymous defer></script></body></html>
+<script src=https://docs.joinsharkey.org/index.min.108e066b8f8aff0aa84eab35f8a8adbbe6375d224c526f9446cc5654c7e50836d7d8e9cec00b4495dc5d8aeb14975dcd33d0ff9a0c71dd6c2e1e2c0453631067.js integrity="sha512-EI4Ga4+K/wqoTqs1+Kitu+Y3XSJMUm+URsxWVMflCDbX2OnOwAtEldxdiusUl13NM9D/mgxx3WwuHiwEU2MQZw==" crossorigin=anonymous defer></script></body></html>
