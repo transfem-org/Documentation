@@ -19,7 +19,7 @@ git clone --recurse-submodules -b stable https://github.com/transfem-org/Sharkey
 url: https://{YOUR DOMAIN NAME}/ db: host: localhost port: 5432 db: sharkey user: sharkey pass: {YOUR PASSWORD} (replace {YOUR PASSWORD} with an actual password you make up for this, and {YOUR DOMAIN NAME} with the domain name we talked about at the start)
 Building:
 pnpm run build Create the PostgreSQL user and database, either with createuser and createdb or with sudo -u postgres psql and then:
-create database sharkey with encoding = 'UTF8'; create user sharkey with encrypted password '{YOUR_PASSWORD}'; grant all privileges on database sharkey to sharkey; alter database sharkey owner to sharkey; \\q (replace {YOUR PASSWORD} with the same password as before)
+CREATE DATABASE sharkey WITH ENCODING = 'UTF8'; CREATE USER sharkey WITH ENCRYPTED PASSWORD '{YOUR_PASSWORD}'; GRANT ALL PRIVILEGES ON DATABASE sharkey TO sharkey; ALTER DATABASE sharkey OWNER TO sharkey; \\q (replace {YOUR PASSWORD} with the same password as before)
 Then create the schema:
 pnpm run init And start it:
 pnpm start you should see a series of colourful lines, ending with something like:
@@ -29,7 +29,7 @@ With systemd #Create a file /etc/systemd/system/sharkey.service containing:
 Then:
 sudo systemctl daemon-reload sudo systemctl enable sharkey sudo systemctl start sharkey After that, systemctl status sharkey should show that it\u0026rsquo;s running.
 With OpenRC #Create a file /etc/init.d/sharkey containing:
-#!/sbin/openrc-run name=sharkey description=\u0026quot;Sharkey daemon\u0026quot; command=\u0026quot;/usr/bin/pnpm\u0026quot; command_args=\u0026quot;start\u0026quot; command_user=\u0026quot;sharkey\u0026quot; supervisor=\u0026quot;supervise-daemon\u0026quot; supervise_daemon_args=\u0026quot; -d /home/sharkey/Sharkey -e NODE_ENV=production -e \\\u0026quot;NODE_OPTIONS=--max-old-space-size=8192\\\u0026quot; pidfile=\u0026quot;/run/\${RC_SVCNAME}.pid\u0026quot; depend() { need net use logger nginx } (you may need to change that /usr/bin/pnpm if you\u0026rsquo;re not using your system NodeJS).
+#!/sbin/openrc-run name=sharkey description=\u0026quot;Sharkey daemon\u0026quot; command=\u0026quot;/usr/bin/pnpm\u0026quot; command_args=\u0026quot;start\u0026quot; command_user=\u0026quot;sharkey\u0026quot; supervisor=\u0026quot;supervise-daemon\u0026quot; supervise_daemon_args=\u0026quot; -d /home/sharkey/Sharkey -e NODE_ENV=production -e \\\u0026quot;NODE_OPTIONS=--max-old-space-size=8192\\\u0026quot;\u0026quot; pidfile=\u0026quot;/run/\${RC_SVCNAME}.pid\u0026quot; depend() { need net use logger nginx } (you may need to change that /usr/bin/pnpm if you\u0026rsquo;re not using your system NodeJS).
 Then:
 sudo rc-update add sharkey sudo rc-service sharkey start After that, rc-service sharkey status should show that it\u0026rsquo;s running.
 Configure the web server #NGINX #See Misskey\u0026rsquo;s instructions
