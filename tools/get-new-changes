@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# this script will show the commits on our repo (but not from
+# upstream) since the last_commit_checked; this is handy to update the
+# content/en/docs/comparsion/misskey.md file
+
+# set up a git clone like this:
+#
+# git clone -o sharkey -b stable https://github.com/transfem-org/Sharkey.git
+# cd Sharkey
+# git remote add misskey https://github.com/misskey-dev/misskey.git
+# git remote update -p
+
+# run this program from the root of that clone, update the comparison
+# document, edit the `last_commit_checked` to be the output of `git
+# rev-parse sharkey/stable`, commit all the changes
+
+last_commit_checked=10222804655445e8c9f6be4203fd566132de2e50
+
+exec git cmplog sharkey/stable ^misskey/develop ^"${last_commit_checked}"
