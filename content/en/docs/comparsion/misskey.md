@@ -49,6 +49,7 @@ toc: true
 * emoji auto-complete is case-insensitive
 * it's always clear if a note has a poll (misskey sometimes hides
   that)
+* multiple-choice polls are clearly marked as such
 * boosts and quote-boost are accounted separately
 * only 1 boost per note per user is allowed
 * admins can remove bots from "trending"
@@ -69,6 +70,7 @@ toc: true
   use it in more cases (e.g. when limiting results to notes containing
   images)
 * when showing a reply containing many mentions, they are shortened
+* there's a search widget
 
 ### Ones of interest to admins
 
@@ -81,3 +83,4 @@ toc: true
 * admins can refresh remote user details
 * admins can set a default emoji for likes/reactions
 * the PWA icon matches the instance icon
+* deleted custom emoji are automatically removed from Drive
