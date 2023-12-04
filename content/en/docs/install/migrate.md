@@ -41,6 +41,20 @@ pnpm run migrate
 Also, clear your browser's cache and local storage (this will log your
 browser out of Misskey/Sharkey).
 
+### Using Docker
+
+If you are using the `docker-compose.yml` file from Misskey with which builds locally follow these steps:
+
+```shell
+git remote rename origin misskey
+git remote add origin https://github.com/transfem-org/Sharkey.git
+git remote update -p
+git checkout -b stable --track origin/stable
+git pull --recurse-submodules
+pnpm install --frozen-lockfile
+sudo docker compose build
+```
+
 ## From Firefish
 
 This guide was only tested on a Firefish 1.0.5-RC instance: other
