@@ -43,7 +43,7 @@ browser out of Misskey/Sharkey).
 
 ### Using Docker
 
-If you are using the `docker-compose.yml` file from Misskey with which builds locally follow these steps:
+If you are using the `docker-compose.yml` file from Misskey which builds locally follow these steps:
 
 ```shell
 git remote rename origin misskey
