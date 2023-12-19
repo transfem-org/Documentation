@@ -87,7 +87,7 @@ toc: true
 * the depth of the thread / detailed view of notes can be changed
   (still defaults to 5)
 * there's a search widget
-* you can choose to add a "back" button at the top of each page
+* there's a "back" button at the top of each page
 
 ### Ones of interest to admins
 
