@@ -165,7 +165,7 @@ This is a minimal theme that just sets a font:
 ```json
 {
   id: "0fb6f73a-02ea-4722-8394-4b02188b7cfa",
-  name: "Prank,
+  name: "Prank",
   author: "dakkar",
   desc: "Sets a funny font",
   base: "light",
