@@ -109,6 +109,11 @@ straight to [the `descriptors` argument to the `FontFace`
 constructor](https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace#descriptors). You
 very rarely need this.
 
+If you want, you can even use a font from your drive: upload the file,
+then click on its icon in the drive, copy the URL, and use it in
+`fontFaceSrc`, like
+`url(https://instance.example.com/files/8b0cc94f-0307-4aef-867b-b2e9ee6fd79f)`.
+
 #### Constants
 
 You can also add extra values for colour specifications, using keys
