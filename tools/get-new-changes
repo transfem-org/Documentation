@@ -4,17 +4,31 @@
 # upstream) since the last_commit_checked; this is handy to update the
 # content/en/docs/comparsion/misskey.md file
 
-# set up a git clone like this:
+# set up a set of git clones like this:
 #
-# git clone -o sharkey -b stable https://github.com/transfem-org/Sharkey.git
+# git clone -o sharkey -b stable https://git.joinsharkey.org/Sharkey/Sharkey.git
 # cd Sharkey
 # git remote add misskey https://github.com/misskey-dev/misskey.git
 # git remote update -p
+# cd ..
+# git clone -o sharkey -b stable https://git.joinsharkey.org/Sharkey/sfm.js
+# cd sfm.js
+# git remote add misskey https://github.com/misskey-dev/mfm.js.git
+# git remote update -p
+# cd ..
 
 # run this program from the root of that clone, update the comparison
-# document, edit the `last_commit_checked` to be the output of `git
-# rev-parse sharkey/stable`, commit all the changes
+# document, edit each `last_commit_checked` to be the output of `git
+# rev-parse sharkey/stable` in the corresponding clone, commit all the
+# changes
 
-last_commit_checked=10222804655445e8c9f6be4203fd566132de2e50
+declare -A last_commit_checked=(
+  ["sharkey"]=10222804655445e8c9f6be4203fd566132de2e50
+  ["sfm.js"]=0448eedb812fd300fbf12257c9960a914d48613c
+)
 
-exec git cmplog sharkey/stable ^misskey/develop ^"${last_commit_checked}"
+log_cmd=( git log -u -b --word-diff=color --word-diff-regex='[[:alnum:]_]+|[^[:space:]]' --no-merges )
+
+for repo in "${!last_commit_checked[@]}"; do
+  ( cd "$repo"; exec "${log_cmd[@]}" sharkey/stable ^misskey/develop ^"${last_commit_checked[$repo]}"; )
+done
