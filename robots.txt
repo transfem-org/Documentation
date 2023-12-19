@@ -1,5 +1,9 @@
 User-Agent: *
 
+Disallow: /docs/getting-started/
+
+Disallow: /docs/getting-started/overview/
+
 Disallow: /docs/install/
 
 Disallow: /docs/install/fresh/
@@ -9,6 +13,8 @@ Disallow: /docs/install/migrate/
 Disallow: /docs/comparsion/
 
 Disallow: /docs/comparsion/misskey/
+
+Disallow: /docs/install/faqs/
 
 Disallow: /docs/
 
