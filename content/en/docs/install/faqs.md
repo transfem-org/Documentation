@@ -4,7 +4,7 @@ weight: 4000
 toc: false
 ---
 
-# How do I enable note search?
+## How do I enable note search?
 
 You use the "roles" system. Log in as administrator, go to the
 "control panel", select the "roles" section (under "management"). Then
@@ -12,7 +12,7 @@ either expand the "role template" (if you want to give every user
 access to search) or create a new role (if you want to give access to
 only some users), then change the "**Usage of note search**" setting.
 
-# How do I give my users more Drive space?
+## How do I give my users more Drive space?
 
 You use the "roles" system. Log in as administrator, go to the
 "control panel", select the "roles" section (under "management"). Then
@@ -21,7 +21,7 @@ same amount space) or create a new role (if you want to give different
 amounts of space to different users), then change the "**Drive
 capacity**" setting.
 
-# How do I enable push notifications for the web interface?
+## How do I enable push notifications for the web interface?
 
 First of all, you need to generate a pair of so-called "VAPID" keys.
 
