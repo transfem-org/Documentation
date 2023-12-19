@@ -23,7 +23,7 @@
 # changes
 
 declare -A last_commit_checked=(
-  ["sharkey"]=10222804655445e8c9f6be4203fd566132de2e50
+  ["Sharkey"]=10222804655445e8c9f6be4203fd566132de2e50
   ["sfm.js"]=0448eedb812fd300fbf12257c9960a914d48613c
 )
 
