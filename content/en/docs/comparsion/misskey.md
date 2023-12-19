@@ -21,8 +21,8 @@ toc: true
   as NSFW
 * GDPR-style Data Subject Access Requests (users can export all data
   related to themselves)
-* "bubble" timeline, where admins can show notes from selected
-  instances
+* "bubble" timeline, showing all known notes from an admin-configured
+  list of remote instances
 * you can specify the visibility of each boost / renote
 
 ### Fun ones
