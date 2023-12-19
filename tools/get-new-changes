@@ -6,12 +6,12 @@
 
 # set up a set of git clones like this:
 #
-# git clone -o sharkey -b stable https://github.com/transfem-org/Sharkey.git
+# git clone -o sharkey -b stable https://git.joinsharkey.org/Sharkey/Sharkey.git
 # cd Sharkey
 # git remote add misskey https://github.com/misskey-dev/misskey.git
 # git remote update -p
 # cd ..
-# git clone -o sharkey -b stable git@git.joinsharkey.org:Sharkey/sfm.js
+# git clone -o sharkey -b stable https://git.joinsharkey.org/Sharkey/sfm.js
 # cd sfm.js
 # git remote add misskey https://github.com/misskey-dev/mfm.js.git
 # git remote update -p
