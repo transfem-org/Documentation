@@ -28,9 +28,9 @@ mkdir Sharkey && mkdir Sharkey/.config
 Fetch all required examples and enter directory:
 
 ```bash
-wget -O Sharkey/docker-compose.yml https://raw.githubusercontent.com/transfem-org/Sharkey/stable/docker-compose.yml.example
-wget -O Sharkey/.config/default.yml https://raw.githubusercontent.com/transfem-org/Sharkey/stable/.config/example.yml
-wget -O Sharkey/.config/docker.env https://raw.githubusercontent.com/transfem-org/Sharkey/stable/.config/docker_example.env
+wget -O Sharkey/docker-compose.yml https://git.joinsharkey.org/Sharkey/Sharkey/raw/branch/stable/docker-compose.yml.example
+wget -O Sharkey/.config/default.yml https://git.joinsharkey.org/Sharkey/Sharkey/raw/branch/stable/.config/example.yml
+wget -O Sharkey/.config/docker.env https://git.joinsharkey.org/Sharkey/Sharkey/raw/branch/stable/.config/docker_example.env
 cd Sharkey
 ```
 
