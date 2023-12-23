@@ -24,6 +24,7 @@ toc: true
 * "bubble" timeline, showing all known notes from an admin-configured
   list of remote instances
 * you can specify the visibility of each boost / renote
+* thread view updates in real time
 
 ### Fun ones
 
@@ -55,6 +56,7 @@ toc: true
 * pop-up user profiles show if follow requests to the user require
   approval, have a "open remote profile" option, and show custom
   fields (e.g. the user's website address)
+* user profile pages always show the whole user description
 * MFM cheatsheet when composing notes
 * MFM won't create a search box just because a sentence ends in
   "search"
@@ -88,6 +90,9 @@ toc: true
   (still defaults to 5)
 * there's a search widget
 * there's a "back" button at the top of each page
+* timelines will show notes from users you follow, even if their
+  instance is muted
+* tag view respects blocks, mutes, suspensions
 
 ### Ones of interest to admins
 
@@ -99,8 +104,10 @@ toc: true
 * admins can disable achievements
 * admins can refresh remote user details
 * admins can set a default emoji for likes/reactions
+* admins can set a list of custom "message of the day"
 * the PWA icon matches the instance icon
 * deleted custom emoji are automatically removed from Drive
 * container images are much smaller (we don't ship unused
   dependencies)
+* we publish stable container images tagged by the release version
 * CWs can be up to 500 characters
