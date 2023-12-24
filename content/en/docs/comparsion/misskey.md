@@ -109,5 +109,4 @@ toc: true
 * deleted custom emoji are automatically removed from Drive
 * container images are much smaller (we don't ship unused
   dependencies)
-* we publish stable container images tagged by the release version
 * CWs can be up to 500 characters
