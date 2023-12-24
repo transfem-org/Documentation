@@ -25,6 +25,8 @@ toc: true
   list of remote instances
 * you can specify the visibility of each boost / renote
 * thread view updates in real time
+* check signature on ActivityPub GET requests, also known as "secure
+  mode" or "authorized fetch" (experimental)
 
 ### Fun ones
 
