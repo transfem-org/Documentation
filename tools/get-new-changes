@@ -18,17 +18,20 @@
 # cd ..
 
 # run this program from the root of that clone, update the comparison
-# document, edit each `last_commit_checked` to be the output of `git
-# rev-parse sharkey/develop` in the corresponding clone, commit all
-# the changes
+# document, edit `last_commit_checked` to contain the lines that the
+# script printed at the end, commit all the changes
 
 declare -A last_commit_checked=(
-  ["Sharkey"]=fd57c7e24caf936392440de3c063b5eaa9d588cb
-  ["sfm.js"]=7ebad2484d28e33c4335f7ecabdb98fdd4e96b03
+  ["Sharkey"]=a67d31c963df2c9cde05bddf106bd8a95958f17e
+  ["sfm.js"]=4b44cf6021118520b3bd8d7fa8fe15b01b890c29
 )
 
 log_cmd=( git log -u -b --word-diff=color --word-diff-regex='[[:alnum:]_]+|[^[:space:]]' --no-merges )
 
 for repo in "${!last_commit_checked[@]}"; do
   ( cd "$repo"; exec "${log_cmd[@]}" sharkey/develop ^misskey/develop ^"${last_commit_checked[$repo]}"; )
+done
+
+for repo in "${!last_commit_checked[@]}"; do
+  ( cd "$repo"; echo "[\"$repo\"]=$(git rev-parse HEAD)" )
 done

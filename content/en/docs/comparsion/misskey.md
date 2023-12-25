@@ -39,6 +39,7 @@ toc: true
   legible for you
 * you can change the way note threads are show to be more like
   Firefish (with lines connecting notes and their replies)
+* MFM renders mathematical formulas
 
 ### UI/UX
 
