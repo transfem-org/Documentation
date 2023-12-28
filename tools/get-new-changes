@@ -22,14 +22,14 @@
 # script printed at the end, commit all the changes
 
 declare -A last_commit_checked=(
-  ["Sharkey"]=a67d31c963df2c9cde05bddf106bd8a95958f17e
-  ["sfm.js"]=4b44cf6021118520b3bd8d7fa8fe15b01b890c29
+  ["Sharkey"]=870f70a6833f4dd9744fd1e6c356262d803c0d0c
+  ["sfm.js"]=3ab3ca1cfb675c97c58919b1ac4a8f1f694fd17c
 )
 
 log_cmd=( git log -u -b --word-diff=color --word-diff-regex='[[:alnum:]_]+|[^[:space:]]' --no-merges )
 
 for repo in "${!last_commit_checked[@]}"; do
-  ( cd "$repo"; exec "${log_cmd[@]}" sharkey/develop ^misskey/develop ^"${last_commit_checked[$repo]}"; )
+  ( cd "$repo"; exec "${log_cmd[@]}" sharkey/develop ^misskey/develop ^misskey/master ^"${last_commit_checked[$repo]}"; )
 done
 
 for repo in "${!last_commit_checked[@]}"; do

@@ -55,6 +55,8 @@ toc: true
 * you can choose to always expand notes that have a CW
 * one-button "like" (plus custom reactions on a separate button)
 * animated MFM can be enabled/disabled on each note
+* italic, bold, hashtags accept more characters (so `#æîç` is a valid
+  hashtag)
 * supports longer alt text
 * pop-up user profiles show if follow requests to the user require
   approval, have a "open remote profile" option, and show custom
@@ -96,6 +98,7 @@ toc: true
 * timelines will show notes from users you follow, even if their
   instance is muted
 * tag view respects blocks, mutes, suspensions
+* you won't receive any notification for muted threads
 
 ### Ones of interest to admins
 
