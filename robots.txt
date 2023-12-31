@@ -6,6 +6,8 @@ Disallow: /docs/getting-started/overview/
 
 Disallow: /docs/install/
 
+Disallow: /docs/customisation/themes/
+
 Disallow: /docs/install/fresh/
 
 Disallow: /docs/install/migrate/
@@ -13,6 +15,8 @@ Disallow: /docs/install/migrate/
 Disallow: /docs/comparsion/
 
 Disallow: /docs/comparsion/misskey/
+
+Disallow: /docs/customisation/
 
 Disallow: /docs/install/faqs/
 
