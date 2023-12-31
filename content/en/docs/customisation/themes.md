@@ -8,14 +8,14 @@ toc: true
 
 ```json
 {
-	id: "your-unique-identifier",
+  id: "your-unique-identifier",
 
-	name: "The Name of Your Theme",
-	author: "your-name",
-	desc: "Describe your fabulous theme",
-	base: "light",
+  name: "The Name of Your Theme",
+  author: "your-name",
+  desc: "Describe your fabulous theme",
+  base: "light",
 
-	props: {
+  props: {
     …
   }
 }
@@ -138,30 +138,30 @@ This is one of the built-in Misskey themes:
 
 ```json
 {
-	id: "504debaf-4912-6a4c-5059-1db08a76b737",
+  id: "504debaf-4912-6a4c-5059-1db08a76b737",
 
-	name: "Mi Botanical Dark",
-	author: "syuilo",
+  name: "Mi Botanical Dark",
+  author: "syuilo",
 
-	base: "dark",
+  base: "dark",
 
-	props: {
-		accent: "rgb(148, 179, 0)",
-		bg: "rgb(37, 38, 36)",
-		fg: "rgb(216, 212, 199)",
-		fgHighlighted: "#fff",
-		fgOnWhite: "@accent",
-		divider: "rgba(255, 255, 255, 0.14)",
-		panel: "rgb(47, 47, 44)",
-		panelHeaderDivider: "rgba(0, 0, 0, 0)",
-		header: ":alpha<0.7<@panel",
-		navBg: "#363636",
-		renote: "@accent",
-		mention: "rgb(212, 153, 76)",
-		mentionMe: "rgb(212, 210, 76)",
-		hashtag: "#5bcbb0",
-		link: "@accent",
-	},
+  props: {
+    accent: "rgb(148, 179, 0)",
+    bg: "rgb(37, 38, 36)",
+    fg: "rgb(216, 212, 199)",
+    fgHighlighted: "#fff",
+    fgOnWhite: "@accent",
+    divider: "rgba(255, 255, 255, 0.14)",
+    panel: "rgb(47, 47, 44)",
+    panelHeaderDivider: "rgba(0, 0, 0, 0)",
+    header: ":alpha<0.7<@panel",
+    navBg: "#363636",
+    renote: "@accent",
+    mention: "rgb(212, 153, 76)",
+    mentionMe: "rgb(212, 210, 76)",
+    hashtag: "#5bcbb0",
+    link: "@accent",
+  },
 }
 ```
 
