@@ -90,10 +90,13 @@ toc: true
 * when the instance is using meilisearch to index notes, Sharkey will
   use it in more cases (e.g. when limiting results to notes containing
   images)
-* when showing a reply containing many mentions, they are shortened
 * the depth of the thread / detailed view of notes can be changed
   (still defaults to 5)
 * there's a search widget
+* the search functions (both the dedicated pages and the widget) also
+  cover the functionality of the "lookup" feature, so you can search
+  for a fully-qualified remote username and have their profile fetched
+  and shown
 * there's a "back" button at the top of each page
 * timelines will show notes from users you follow, even if their
   instance is muted
@@ -111,8 +114,13 @@ toc: true
 * admins can refresh remote user details
 * admins can set a default emoji for likes/reactions
 * admins can set a list of custom "message of the day"
+* admins can change the maximum note length
 * the PWA icon matches the instance icon
 * deleted custom emoji are automatically removed from Drive
 * container images are much smaller (we don't ship unused
   dependencies)
 * CWs can be up to 500 characters
+* admins can use multiple configuration files by setting the
+  `MISSKEY_CONFIG_YML` environment variable to a path with wildcards
+  (e.g. `MISSKEY_CONFIG_YML=/path/to/files/*.yml`, they'll be merged
+  in alphabetical order)

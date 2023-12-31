@@ -22,8 +22,8 @@
 # script printed at the end, commit all the changes
 
 declare -A last_commit_checked=(
-  ["Sharkey"]=870f70a6833f4dd9744fd1e6c356262d803c0d0c
-  ["sfm.js"]=3ab3ca1cfb675c97c58919b1ac4a8f1f694fd17c
+  ["Sharkey"]=7b04c6ade4dc11c604ccbf39b834988a16621e85
+  ["sfm.js"]=3eb78bc54ffc2fc22624b1a68ed650f2ab458d00
 )
 
 log_cmd=( git log -u -b --word-diff=color --word-diff-regex='[[:alnum:]_]+|[^[:space:]]' --no-merges )
