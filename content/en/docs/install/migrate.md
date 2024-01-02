@@ -16,7 +16,7 @@ version:
 sudo -u misskey -i
 cd misskey
 git remote rename origin misskey
-git remote add origin https://github.com/transfem-org/Sharkey.git
+git remote add origin https://git.joinsharkey.org/Sharkey/Sharkey.git
 git remote update -p
 git checkout -b stable --track origin/stable
 git pull --recurse-submodules
@@ -47,7 +47,7 @@ If you are using the `docker-compose.yml` file from Misskey which builds locally
 
 ```shell
 git remote rename origin misskey
-git remote add origin https://github.com/transfem-org/Sharkey.git
+git remote add origin https://git.joinsharkey.org/Sharkey/Sharkey.git
 git remote update -p
 git checkout -b stable --track origin/stable
 git pull --recurse-submodules
@@ -121,7 +121,7 @@ redis:
 
 Backup your firefish config and replace it with the [default
 sharkey
-one](https://raw.githubusercontent.com/transfem-org/Sharkey/develop/.config/example.yml)
+one](https://git.joinsharkey.org/Sharkey/Sharkey/raw/branch/stable/.config/example.yml)
 
 Edit the config inline with your instance settings. Make sure to use
 the same `db` & `redis` settings as in your Firefish config.

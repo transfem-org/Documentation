@@ -89,7 +89,7 @@ sudo -u sharkey -i
 (or something like that), then:
 
 ```bash
-git clone --recurse-submodules -b stable https://github.com/transfem-org/Sharkey.git
+git clone --recurse-submodules -b stable https://git.joinsharkey.org/Sharkey/Sharkey.git
 cd Sharkey
 pnpm install --frozen-lockfile
 cp .config/example.yml .config/default.yml
