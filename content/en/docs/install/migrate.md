@@ -80,7 +80,7 @@ DragonflyDB, Sonic / ElasticSearch / MeiliSearch, Firefish
 itself. Stop all of it.
 
 Edit you docker compose and replace the Firefish image with
-`ghcr.io/transfem-org/sharkey:stable`
+`git.joinsharkey.org/sharkey/sharkey:stable`
 
 If you use Sonic or ElasticSearch replace that section of the Docker
 Compose with the following, as Sharkey currently only supports
